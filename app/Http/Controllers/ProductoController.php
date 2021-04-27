@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+use App\Models\Marca;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -16,7 +17,9 @@ class ProductoController extends Controller
     public function index()
     {
         $productos= Producto::all();
-        return response($productos,200);
+        //return response($productos,200);
+        return view(administrador.productolista)
+                    ->with('productos', $productos);
     }
 
     /**
@@ -26,7 +29,10 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+        $marcas=Marca::all();
+        return view('administrador.productocrear',compact('marcas'))
+                   ->with( 'data', [] )
+                   ->with( 'errors', [] );
     }
 
     /**

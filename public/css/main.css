@@ -1,0 +1,28 @@
+.footer {
+  padding: 2em;
+  background-color: #1a1a1a;
+  color: #ededed;
+  height: 200px;
+}
+.content {
+  min-height: calc(100vh - 256px);
+  padding-top: 1.6em;
+}
+
+/*
+px -> pixel
+em -> el tamaño de fuente en el contexto
+rem -> el tamaño de fuente en el navegador
+vh -> la altura / 100
+vw -> el acho /100
+*/
+
+#local-form-layout {
+  padding: 4em;
+
+}
+#local-form-layout form {
+  border: solid rgba(0,0,0,0.2) 1px;
+  background-color: #fafdff;
+  padding: 1.6em;
+}

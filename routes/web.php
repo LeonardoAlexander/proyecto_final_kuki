@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('layout');
 //});
-Route::get('/', 'Web\LandingController@index');
-Route::get('/listventa', 'Web\LandingController@listsale');
+Route::get('/', 'Web\administrador\AdministradorController@index');
+Route::get('/admin', 'Web\administrador\AdministradorController@index');
+
+Route::get('/listaventa', 'Web\administrador\AdministradorController@ventalista');
+Route::get('/nuevaventa', 'Web\administrador\AdministradorController@ventanueva');
+
+Route::get('/productos','ProductoController@index');
+Route::get('/listaproducto', 'Web\administrador\AdministradorController@productolista');
+Route::get('/nuevoproducto', 'Web\administrador\AdministradorController@productocrear');
+Route::post('/nuevoproducto', 'ProductoController@store');
 //Route::get('/administrator', 'Web\Administrator\DashController@paneladmin');
